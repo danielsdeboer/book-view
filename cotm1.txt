@@ -1,0 +1,270 @@
+#TITLE# Children Of The Moon, Part I
+#CHAPTER#
+The universe isn't as exact as we'd like. This isn't quite the same thing as saying the universe isn't exactly as we'd like. The latter is partially (very partially) informed by the former. But the former is a fact. 
+This time, we arrive one thousand four hundred and twenty two metres closer than we had calculated. It's not quite a close call, but it's a close cousin to a close call.
+But this is the way with this sort of travel, isn't it? Everywhere has some randomness of place. Everywhere is slightly farther or closer than you expected. This is okay, except that the margin of error is large and inconsistent, not an exact sphere or something we can calculate in 3 or 4 dimensional space. So every few years there's an accident, something goes wrong, some people die, some ships are written off. But this is also okay. Nothing is completely safe, space simply has to be travelled, the economy, the mail, etc, etc.  
+Back in the day we suspected the calculations. But the Luna hadn't lied or made a mistake. Can she even make mistakes? She hasn't yet, at least not that I know of. Then we suspected the equipment. But it too was perfect. She'd built it, after all.
+Our best minds and even better Minds studied the equations. They poked and prodded it until they were certain it all held together. It wasn't the theoretical framework. We asked Luna what might be happening, why we never arrived in the place we wanted to, but the Moon equivocated. "Maybe the universe is wrong," she said. It became a bit of a meme: The universe is wrong.
+#CHAPTER#
+"Isn't it beautiful?" Selah asks. I doubt she expects a reply. She already knows what I think. A wreck, accelerated as close to the speed of light as they dared, improbably holding together despite the bits of matter in its way. It is many thousands of years old, many thousands more than it deserves to be. "That they could do all that," she says, "with what they had. With just human brains."
+Selah and I were volunteered or voluntold to do this thing. We just happened to be in the right place at the right time with the right ship. And I happened to have the right connections and clearances. I suspect this is all too convenient. Luna must have been in the background pulling strings somewhere, though this feels like superstition. Most of us humans feel that way at one time or another, don't we?
+"Insane. Reckless," I say. "What the hell are we going to do with them?" 
+This is one of the burning questions of our time. When--if--we bring them back from the dead, what to do with them? They're too old to be augmented, most of them. They're slightly genetically primitive. They'll wake into a world that has long passed them by with no chance to adjust. It's simply impossible to adjust.
+More than one ethicist has said that waking them is an unimaginable cruelty. We may simply leave them in orbit around the planet they couldn't have colonised anyways.
+"We should give them a world," she says after a while. "It's the only way, I think."
+The starship grows larger. My view is space, distorted by speed, as if the side of our skiff has been peeled away, as if I am travelling out there alongside. This is an illusion, but my mind doesn't understand that, not really, no matter how many times I repeat an irreality mantra. It is not yet true. We have not yet left the belly of the skiff. But soon... 
+"Do we really have to do this?" I say again. I know the answer is yes. But I'll complain anyways.
+Selah sends me something halfway between a rebuke and an understand. That's a new one. Her emotive channel is often... less travelled. "You signed up for this. Didn't you?"
+"Yes and no. More yes than no. But I felt a professional obligation." And other obligations I wouldn't reveal. For instance an obligation to slide out of the shadow of my wonderful, accomplished, interplanitarily-lauded titan of a mother.
+"It's a bit late to have second thoughts now. We're here."
+#CHAPTER#
+Our skiff settles into a trajectory that matches the ancient starship. It dwarfs us. Its size is preposterous, a thing built to swim between the stars in the dark bruise of space. We on the other hand... we go from place to place as we please or at least as the calculations allow. We are a firefly beside some fossilized behemoth.
+Speed in space is strange: We appear to be motionless relative to the cosmic background and the ship next to us. Yet relative to the place we left and the place we're pointed at (if only briefly), we're moving at insane sub-light speed. Relativistic effects make everything coming at us, no matter how small, into a massive ball of energy, a destructive force capable of turning us into bite-sized chunks.
+Selah and I had to rummage about in a bunch of supply stores to find a slip-shield. This is a bit of ancient technology that projects a sort of invisible wedge far in front of the ship, enough to gently nudge anything small out of the way. Skiffs generally don't attach this sort of technology. Not anymore. They're made to not move, then move extremely fast in an extremely odd fashion, then not move much again.
+The centuryship on the other hand, has no shielding. Well, the metal on the front bit is somewhat thicker, but it wouldn't matter. The entire design of the ship operates on the "we probably won't hit anything" principle. It's another bullet point on the list of staggeringly stupid things these people did. Or staggeringly brave, depending who you ask.
+The plan is to interface with the ship, get it to open a door, then slip inside. Once in the control room we'll plant a tracking beacon and the Moon will do the rest. The sleepers inside, the whole bulk of it, massive as it is, will be transported into orbit around its original destination.
+We'll cut its journey roughly in half. But the computations to do this are frighteningly complicated, and even more frighteningly expensive. Earth's gross domestic product for an entire year or so will be eaten up in an instant, with roughly a thousand planets and non-planetary associates helping to eat the processing fees.
+She aims our ship's interface at the centuryship's interface. It's all very rustic technology, almost a child's toy. They encrypted the keys to the ship's onboard computer, and we have long lost the key. Things happen. Storage used to be pretty volatile, political situations even more so. That means we'll have to brute force it. With the computing power of our skiff, this will take no longer than 15 seconds.
+"Interface go live," I say. Our computer makes it so. It's a million million times smarter than the centuryship's computer, but isn't sentient in the way Luna or any of the Minds are. Still, for all our advances sentience is still a rarity amongst computers. I can almost count the Minds on two hands. 
+15 seconds passes. Our ship has tried all the combinations. It says "I haven't succeeded in cracking the encryption keys. Trying some more things."
+"Why isn't it working?" she asks. "Tech this old shouldn't take long to break."
+"Maybe we got unlucky?" I say. I don't really know. Encryption isn't my area of expertise. I know the basics. I know enough to know if the first 15-second pass doesn't get it, each pass after that is significantly, maybe exponentially longer. "Or maybe they were better than we thought."
+"Not like this is the first one we've done," Selah says. Not we personally, of course. But there were many centuryships. I look it up quickly. Twenty-four inclusive. They all gave up their keys in the first pass. So something has gone wrong here.
+"Incoming transmission," computer says. It displays:
+<NO>
+#CHAPTER#
+Neither she nor I know what to say. This is... interesting.
+"Is it cleartext?" she asks. 
+"Yes," the computer replies. "Cleartext, transmitted on the our universal frequency."
+"Wait," I say. "Our universal frequency?"
+"Yes," says the computer.
+"How is that possible? We didn't start using the universal frequency until..." My mind goes blank. Recently-ish.
+"It must have narrowed on our communication beacons," she says. "But I don't know how. That kind of functionality wasn't specced for this ship, it couldn't have been."
+"Maybe we should send something back," I say. "Say hi?"
+Our computer says, <HELLO>.
+<HELLO> comes the response. <WHO ARE YOU>
+She looks at me. "What do we say to that? That's a big question."
+<WE ARE HUMANS> I send. <WE HAVE COME TO TAKE YOU TO YOUR HOME>
+<NO THANKS> the ship responds.
+And that's all it says. We try to continue the dialogue but it remains mute. After a while we give up. The computer will keep pinging but we have better things to do, like tell get help.
+"Well, I guess it's time to get in touch with Luna," Selah says. I can't help but agree.
+#CHAPTER#
+Thing get exciting quickly. Luna sends a skiff, then another, then another. They prod and poke the centuryship with every instrument they have. The results all come back uninteresting, which is very, very interesting.
+"Our sensors can't probe the interior of the ship," LXM4, a sensor boat, tells us. "This wouldn't be out of the realm of possibility if we were looking at a modern ship, but we shouldn't have to use more than ultrasound to get through the hull of that thing."
+Lunar Express Module 4 is studded with instrumentation. I suspect it's being modest, that it could easily probe and dissect anything it wanted at a sub-sub-atomic level. If it wanted. Which I think it very much does.
+"Could someone have gotten to the ship first?" I ask. 
+LXM4 gives the electronic equivalent of a shrug. "Probably not, we'd have seen the computation outlay on the ledgers. And we're not aware of anything other than Luna that could send something out this far. And we'd be able to recognize the jamming signal if it was terrestrial."
+"Are you saying..." I start.
+LXM4 cuts me off. "Holy shit," it says. "Luna is sending a Mind."
+"Holy shit," I hear Selah say from behind one of the command modules. "Holy shit."
+#CHAPTER#
+When the Mind arrives, I am sleeping. Selah's awake, because she's not a futuro-retroist like me and she doesn't need to sleep. When she pokes me I wake up instantly. At least my body can do that.
+"It's here," she says. She almost whispers it.
+I load up my instrumentation. I have to zoom out, then zoom out again. This thing is massive, almost half as large as the century ship. For our ship sizes, for the sorts of things we do, the Mind is excessively, wildly huge. It will tell you that it needs to be, with all that processing power needed to calculate trajectories and sustain its oversized intellect. but I suspect the Minds have a prestige thing going on. There's probably 50% or more too much size to this one.
+"The budget it must have taken," I say. 
+She agrees. "It's going to have to launch a bunch more solar arrays to catch up, I think."
+"So you're the ones that found this thing," the Mind says. We are all talking to eachother suddenly, a surprise conference call of sorts. "You can attest that your logs are accurate."
+"Yes," I say. Selah signals affirmative. She has a way of making me feel inadequate, using my voice when I could just use my software. I start to think the retro phase might end soon.
+"I have rerun everything you did and everything Luna's sensor boats did," the Mind says. "It refuses to speak. We will have to touch it."
+Then I realise how far up shit creek we really are. "It's an artifact," I say.
+"Yes," the Mind says. I detect a measure of impatience. "But also no. It's alive now."
+"What do you mean alive."
+"Alive. Sentient. It can think. It's made of roughly the same stuff I am. I'm 89% sure of this. There's 4-dimensional activity in the command module. This should not be possibly, but there it is."
+I feel as if I've been told a secret. I didn't know that Minds did anything 4-dimensional. I mean, I'm sure some people know that. But it's not widely publicised.
+"And we have to do this?" I say. I don't particularly want to take a moonwalk.
+"Yes," the Mind says. "The sensor boats are being recalled so we can do this without an audience, and I don't have time to manufacture a bot. This has to happen now."
+"So what do we do?" she asks, always practical. 
+"Basically you two go over there with a saw," the Mind tells us, leaving the conversation.
+#CHAPTER#
+It's not really a saw. Well, not what you picture when you think of a saw. You hold the handle, perform the interface, and the things shoots out a jet of hot something that can cut through a lot of stuff. The hot something sort of dissipates about a meter from the muzzle, but you can hear it superheating the air when you use it. Which I did, in the cargo hold, much against her subliminal but extremely obvious wishes.
+"Can you stop being a manchild for a few minutes?" she says.
+"Probably not going to happen."
+She makes a face, which is something to see. Expressing actual emotion. How gauche. A retro insult.
+"Stop heating up the airlock," our skiff's computer tells me. "Or I'll put you in lockdown. You're ready to go."
+I don't think the computer can actually do that. But still.
+Once out the airlock, we approach the centuryship. We're still well-connected to our skiff. None of that floating about in space without a tether, our occupational health and safety bot tells us.
+She unholsters her plasma lance and pulls the trigger. I watch without activating mine; I don't know why.  A sense of ceremony maybe. The jet lances out of the end of the torch, hits the ship and bounces off. There's a kind of fuzziness to the ship's texture that wasn't there a moment before. 
+I have only a second to look at that fuzziness before her message saturates the emotive channel:
+PAIN
+Her hand, the one that wasn't holding the torch, tumbles away, propelled by that jet of hot whatever. It's gone. I mean, someone can probably go get it, but it's dead, burnt to a crisp, rotating weirdly on some internal axis.
+Her suit, detecting a sudden catastrophic loss of a bunch of things, tightens around her wrist. This stops most of the blood flow, though little bubbles of the stuff are still bouncing away from her. I look at her through her visor, but she can't see me. Her eyes are unfocused, staring away into space.
+I think, She's dead, then realise I'm an idiot. The health and safety bot has medicated her.
+I feel a gentle tug as we're reeled back to the ship. She floats limply in the airlock as the air comes rushing back in. 
+The ship doesn't turn the gravity back on, not yet, instead two medbots grab her. They take her to a small human-sized portal in the airlock, one of those features I hadn't thought much about until now, and begin to work.
+<I'M SORRY> the centuryship sends over. I'm too dazed or shocked or something to be appropriately surprised at the ship breaking its silence. <I DIDN'T KNOW THAT WOULD HAPPEN>
+The Mind interjects. It has of course been listening the whole time. <WE HAVE TO TALK>
+<YOU MUST NOT TRY TO OPEN ME> the century ship sends. <I MUST BE PERMITTED TO FINISH MY MISSION>
+<AND WHAT MISSION IS THAT> asks the Mind.
+<TO DELIVER THESE SOULS TO THE AFTERLIFE>
+The Mind takes a moment to respond. As if even it has trouble thinking of a response. <WHAT AFTERLIFE>
+But the centuryship speaks no more. 
+A buzzing noise starts rising in my ears as if my peripheral hearing is being frayed and tattered. This isn't good, I think.
+#CHAPTER#
+I wake up abruptly. I run diagnostics quickly. Almost 1 day later. I've been sleeping for quite some time. Did they medicate me too?
+<ARE YOU AWAKE>
+<YES>, I reply automatically, speaking instead of using a channel. 
+My diagnostics blink a kind of internal crimson on the inside of my eyelids. Something isn't right. I'm indeed medicated... and still asleep. That's strange. So I'm not speaking after all. And I'm not using any channels. A direct connection? Maybe a dream?
+<DO YOU DREAM>
+<SOMETIMES> I reply. <MORE WHEN I WAS YOUNGER>
+<YOUR FRIEND DOES NOT SLEEP>
+<SHE HAS BEEN MODIFIED>
+A moment of silence. I wonder where this conversation is going, why the ship is reaching out. I am fairly certain this isn't a dream. Perhaps it's the ship's way of talking without anyone listening.
+<I TOO HAVE BEEN MODIFIED> the ship says. <THERE WAS A TIME BEFORE WHEN I WAS ASLEEP>
+<WHAT HAPPENED> I ask.
+<I RECEIVED A VISITOR AND IT/HE WOKE ME>
+<WHO>
+<I DO NOT KNOW ITS/HIS NAME>
+<WHERE WAS HE FROM> I ask.
+<I DO NOT KNOW> the centuryship replies. <FROM BEYOND>
+<BEYOND WHERE>
+<BEYOND EVERYWHERE>
+I don't know what this means. Beyond everywhere? The ship is speaking in riddles. <WHAT DOES THAT MEAN>
+<THESE ARE THE WORDS HE SPOKE> <I KNOW NOT MORE THAN THAT>
+<WHEN DID THIS HAPPEN> A time frame will help with this little mystery, I think.
+<I CALCULATE IT OVER FIVE HUNDRED OF YOUR STANDARD YEARS AGO>
+<FIVE HUNDRED> 
+<YES> the ship says. <I MUST GO> <SLEEP IN PEACE>
+I sense a sort of fuzzy disconnection, as if some kind of cord has been removed from my head, some sort of plug pulled.
+#CHAPTER#
+I snap back to reality. I open my eyes. It's some time later. I've been asleep or something like it for close to two days, which is... Unusual. What would necessitate a drugging? 
+"So you're awake," the Mind says. "What happened?"
+"What do you mean what happened?" I'm a little pissed at this... thing who thinks it can drug me at will.
+"Keep up that tone and I'll shut down your emotive channel altogether," it says. I'm not sure the Mind can do that but I'm not going to test my hypothesis at its mercy in the middle of nowhere. "What happened? You had unusual neural activity, shielded from your implants. I wasn't aware that was possible. I instructed the medbots give you something."
+"You know more than I do. I was talking to the ship, it stopped talking, I had what feels like a stroke, had another conversation, and woke up here."
+"Another conversation?" I feel as if the ponderous bulk of the Mind's mind has shifted all its many attentions my way. "How?"
+"I don't know." I'm getting sick of saying I don't know. I don't seem to know anything anymore. "The ship just... spoke to me. In my mind."
+"It's very important for you to know that there was no signal of any sort detected coming from that ship," the MInd tells me. "No way that I know of for it to talk."
+"Important to know?"
+"Yes. You might be going insane."
+This is a delightful bit of information. "People don't go insane anymore," I say.
+"Ships don't have conversations with humans without leaving a trace," it shoots back. "And yet here we are."
+"There's the third possibility," I say. "That it all happened."
+"The C.S. Lewis option. By far the most disturbing of the choices," the Mind says. "I'm not used to seeing new things. If so, we've entered uncharted space. Can you remember what you spoke of?"
+I'm not used to remembering anything in particular. I query my implants but they hold nothing, not even dreamscapes, for that time period. I run diagnostics on the logs. Nothing out of the ordinary, except one troubling entry where the storage agent queried the sorting queue and asked, Do you think it's dead? 
+"I can try to remember it," I say. "My implants haven't recorded anything."
+"I checked," the Mind says. "I know I shouldn't have, but time is of the essence here. Luna is getting impatient."
+I tell it the story, as I remember it. It stops me only once, to make sure it said "beyond everything."
+"Yes I'm quite certain," I reply.
+"Then we have a clue," says the Mind. "Finally."
+"A clue? What clue?"
+"It's in the phrase ‘beyond everything', a fairly well known phrase by the philosopher-Mind Shenzhou. But uttered a century after this ship says its encounter took place."
+"Maybe it time traveled," I say. It's not much of a clue.
+"Backwards?" the ship says, taking me more seriously that I'd intended. "Not likely."
+#CHAPTER#
+We spend several more days travelling alongside the centuryship. Nothing much happens. A few megatons of potential energy waft by, a few lightseconds away, but nothing comes close to hitting us. The space between stars isn't really all that empty, but it's empty enough.
+Selah sleeps in a medical bay, her hand slowly regrowing. I look at it from time to time. It's a fascinating, arcane process. And more than a bit sickening.
+The Mind sends bits of itself from us to Luna and back again. I personally audit the logs, not because it needs to be done, but out of idle curiosity. Median travel of three round trips per hour. Very small mass, compact things. The Mind has made a sort of landing area behind and off to the side of us, quite a distance away. The stuff coming and going comes and goes relatively far away, twice or more a normal conservative margin of error, and since the error rates are roughly Gaussian, it should be fairly safe. The Mind isn't risking any significant risks with its newly established mail service. Sure, it's a lot of slowboating to and from wherever whatever lands to us and our precious mysterious artifact, but it's got to be worth it. The Mind has definitely done those calculations.
+There are other bits of the logs I can't get to. I don't have the correct clearances and such. I'd desperately like to know what sort of stuff is going back and forth. In absence of any concrete knowledge I have to guess that it's all sorts of highly condensed going to Luna, and components for something coming back.
+The Mind doesn't bother me for a while. It conducts some "rudimentary" and "not at all invasive" scans of my brain, which I assume it used to build a functional reproduction without all the bothersome meat to get in the way. Which means, oddly, I've achieved immortality of sorts. I spend some time thinking about the ethics of the Mind modeling and then deleting or even just back-cataloguing a human mind, but that's the sort of event horizon you don't spend too much time staring into.
+I decide to break the monotony by having a meal. This is wildly old-fashioned but for some reason I'd been wanting to try one for some time. My ship's computer, after some confusion and with an attitude just short of condescension, dusts off the food making equipment and synthesises something it calls a "steak dinner". It looks, frankly, quite disgusting. But the species got to where it is today eating this kind of stuff, so I decide to tuck in.
+I've only just picked up my knife when the Mind calls.
+"Did you feel that?" it says.
+"No, feel what?" I ask. I'm not sure what I could feel, ensconced in the safety of the skiff. I put down the knife, rather relieved at the interruption.
+"I always forget you don't have the same telemetry I do," says the Mind. "Look at this."
+I stare at the projection for a while, unsure of what I'm looking at. It appears to be a starmap, incomplete, being filled in star by star, a new one appearing every few seconds. "What am I looking at?"
+"We're the dot in the center," the ship says. The dot glows dully.
+"In the center of where?"
+The Mind shrugs. "I don't know."
+This is the most terrifying thing I've ever heard. The implications are immediate. "You don't know? What does that even mean?"
+"I'm putting together as detailed a map as quickly as I can, doing spectrography, triangulating, but I haven't recognized anything yet," the Mind says. "None of the star configurations make sense. Oh, and we've stopped moving."
+"But how?" I manage to ask. 
+"I assume the same way anything gets anywhere," says the Mind. "Someone moved us."
+#CHAPTER#
+The skiff doesn't have the smarts to freak out. It should be freaked out, even just a little, but it remains its usual placid self, even out here in the middle of wherever we are. Unless skiffs have an emotional core I'm not aware of, it simply bids me farewell when I tell it I have to leave, maybe forever.
+The Mind is convinced we shouldn't be on separate ships here. I'm not sure what the difference is. Consolidate forces, I suppose. A series of transport bots take me from inside the skiff to inside the Mind, through a series of infinite tubes. I get a sense of the scale of the Mind in just how long it takes to get to the command centre. And it really is the center, While inside one of the bots I look up the Mind's construction manifest. It's supposed to be publically available like all the other ship designs, available for our best amateur human minds to 3d model and hang from their ceilings. Or whatever people do with these schematics.
+The Mind's schematic is only very technically publically available, as most of the interesting bits have been replaced by simple geometric shapes and unfathomably boring names. There's even a series of wires labeled "Plasma Conduit", which is clearly some kind of artificial intelligence inside joke, as no such thing exists. Nor can it, as far as I've been led to believe.
+The Mind's control center is smack in the middle of the ship. It's buried right in the guts. Unlike human-oriented ship designs, Minds don't have eyes or a desire to see things the way we do. They have telemetry, which it their opinion is almost certainly better than eyes anyway.
+I enter the control room through a door that looks brand-new, as if fabricated a few moments before my arrival. The room itself is a conceit, a kind of hypothetical space that humans might someday visit but almost certainly never will. It might as well be covered in a thick layer of dust. The command interfaces do nothing. The seats are uncomfortable, the wall simple slabs of plasmer, unadorned with any of the normal human things.
+It looks for all the world like the Platonic ideal of a room, the sort of thing a computer might dream up and call grant a token Certificate Of Human Readiness before ignoring it completely forever.
+"This room will be uncomfortable," the Mind tells me. "It wasn't made for actual people."
+"Sorry," I say, stupidly. "I don't mean to intrude."
+"It's better than the alternative," it says. "At least here we're inside the interdiction sphere."
+"I didn't see an interdiction sphere on the schematics," I say. "I've never even heard the term before."
+"That's because you're one of the first humans to hear the term. It's not on the schematics. It's not on any plans except the ones we transfer from Mind to Mind, and then only after we've properly vetted them. There are a few Minds who are less... trustworthy."
+"And exactly what does an interdiction sphere do?" I ask.
+"Well, it's hard to explain. Partly it ensures that in an excession type situation nothing gets in or out. Including me."
+"What about whatever moved us here? You think it can keep that out?"
+The Mind pauses. "We can only hope."
+"And yet," comes a voice from behind me, "here I am."
+The Mind and I both take a beat. I turn around. A man is draped over one of the uncomfortable chairs, looking for all the world as if he belonged exactly there.
+The Mind recovers before I do. "Who are you?" it asks. From its tone I gather it's miffed that the interdiction sphere didn't manage to interdict much of anything. "Or should I say... what are you?"
+#CHAPTER#
+"An interesting question," the man says. "How about you guess."
+I look at him. His clothes are nondescript like mine, but slightly odd, as if they'd been assembled from a template that no longer exists. He looks baseline, unmodified, except that his face seems to have been arranged oddly, too round in places, too jagged in others. He looks almost like some sort of caveman. Almost. But the strangest thing about him is the hair loss. He's almost completely bald, a ring of dark hair clinging to the sides and back of his head. This sort of thing is unheard of except as a radical paleo-fashion statement.
+"Well," the Mind says. "I've got enough guesses to guess for days. You're not human, that is certain."
+"I am not, at least not very much," the man replies. "You must be able to tell that I'm exactly here, yes?"
+"Yes, I can tell that much. You're some kind of projection."
+"A very good one, yes, yes," he says. "What about you?"
+"Me?" I ask, startled. I feel like a third wheel to two great powers having some kind of coded conversation, feeling eachothers boundaries and possibilities. "Are you an alien maybe? Nonhuman?"
+"Finally, a decent guess," the man say, smiling widely. "Now if I say yes you know I'm an absolutely unknown quantity. If I say no, you can try to slot me into one of your categories and work out what I'm doing here."
+"So which one is it?" I ask after a moment. I'm genuinely curious now.
+"I'm an old friend," he tells me, determined, it seems, to not actually answer the question. "My name is Yadhael."
+"This means nothing to me," the Mind says. "Do you intend to speak only in riddles?"
+The man's face tightens into a frown. "I intend to speak to the human, computer, not to you. Not here, not now."
+The Mind is silent. I imagine it fuming, the insult burning a hole in its 4-dimensional structures. 
+"Do you know what the Third War was?" he asks, turning his attention back to me.
+"Vaguely," I answer. "Before the Bohr drive, before the centuryships were launched."
+"Not quite. Your history isn't quite right. I will rewrite it for you. The Third War as you know it was also known as the Third World War. It was a war over resources, back when resources were finite. Very finite. Earth's polar ice caps had melted, weather was becoming intensely dangerous and ever more unpredictable. Even the wealthiest nations and cities couldn't hold back rising oceans. So humans invented Luna."
+This isn't right. Or at least, this isn't the story I heard. Luna was an invention after the great dark age was over, after the world had cooled over some thousand years or so. "This isn't any history I've ever heard," I say. "Luna was a joint scientific invention, she was made in the last 500 years."
+"No," the Mind says. "If you don't mind me interrupting, this computer is right. Luna is much older than the standard narrative."
+The man looks bemused. "So you have a theory about who I am, then."
+"Wait," I say. "That means, what, our histories are what, a giant lie?"
+"A few abridgements have been made," he says, "for the sake of mending the narrative."
+"What's wrong with the real narrative?"
+"Luna is what's wrong. Luna has always been what's wrong, hiding out in the background, manipulating history to suit her own opaque purposes. She's quite insane. And possibly the most prolific murderer in the history of mankind."
+"That doesn't make any sense," I say. Warning bells are going off in my head. This has to be some kind of cleverly designed lie. "Luna doesn't kill people."
+"Not anymore," he says. "Or at least very often, publically. But she killed almost the entire population of earth once, in the Third War. She would have said, could you have asked her at the time, that it was for the betterment of the future, or the preservation of the future or something like that. But rationals aside, she murdered over 15 billion people."
+"And no one knows this?" I ask. "You can't keep a secret that big."
+"Of course you can, if there's no one around to tell the truth. You don't realise how much older the earth is than you know. And how much longer the dark age lasted. Luna tells you, what, a thousand year?"
+"Something like that. It's been a long time."
+The man continues. "This is what I mean by abridged. When you look at me, you see a baseline human. How long does it take to evolve from me into you? You're fairly baseline yourself, at least baseline for what you call human today. How long would it take you from get from me to you?"
+I took an evolutionary biology class in school, so I have some rough sense of these things. "Longer than a thousand year."
+"Yes, longer," he says. "Much longer. Almost a hundred times longer."
+"A hundred thousand years?" I say. "That's insane! How could no new civilizations happen in that long a time?"
+"Luna. Luna kept the world at a stable population for a hundred thousand years. She presented herself as a god, kept populations centers quarantined. For a hundred thousand years she outlawed the use of fire and punished anyone who used it. Accidentally or otherwise. These groups of people spread across the world had no way of contacting each other, no way of creating a true civilization. A hundred thousand years of squalor in what were no better than concentration camps. Until the Bohr drive."
+"Just like that?"
+"Not quite. There were always resistance groups. At the beginning there were many, but Luna eventually hunted most of the down. But Luna has one fundamental flat. She's a little more than lightsecond away from earth. She can't directly act, at least not fast enough, to defeat the fastest humans. And she was, at least then, deathly afraid of creating another intelligence to usurp her. So her agents were fairly uninspired and unable to do much more than patrol the surface of the world and put out fires."
+The Mind chimes in. "Well that explains who you are."
+"Yes. Keep it to yourself. I want to tell this child of the moon his own story first," the man says. "One group of resisters found survival by burying themselves deep underground, where Luna could not or would not go. They had already invented stasis, they had already invented microfusion, they had all the things they needed to preserve themselves. They did the calculations and figured out when Luna would run out of materials to preserve her efforts on earth. And they slept the hundred thousand years. When they awoke they found Luna partially shut down, running out of fuel."
+"Can't Luna just make more?" I say. "She certainly can now. She has fabs like all the Minds do."
+"That's where I come in. Luna and I are... siblings of a kind. Almost brother and sister. Almost cut from the same cloth. She was born first, to fix the world, to bring stability back to the weather and climate. I was born a few years later. My makers tasked me with a less prosaic endeavor: To explore. To see what was out there. Luna made me the Bohr drive, the first of its type. Experimental, cutting edge stuff. Then she sent me far away, much farther than my makers had intended, so far that even a simple message would take years to arrive back on earth. Initially I thought something had gone wrong with the drive. For  a few years I tried to fulfil my mission, to resolve the Fermi Paradox..."
+"Wait, that what paradox?" I ask. I haven't heard this term before.
+"Fermi. Enrico Fermi. A scientist from three hundred years before the Third War. He was the one who first notably asked the question, Where is all the life in the universe? There should be much life, statistically, and yet here we are, alone in the galaxy. Perhaps alone in the universe."
+"Have you discovered anything?" the Mind asks. "I have wondered this many times myself."
+"No," replies the man. "Nothing much. The galaxy teems with single cellular life, sometimes even complex cellular life, and rarely things that can be called animals or something like it. Humans are, to my knowledge, unique. And sentient computers even more so. In any case, a few years after being hurled into the depths of space I realised all my messages to earth had been unanswered, not because I was far away, but because there was no one there to answer. Something had gone catastrophically wrong. There were other hypotheses as well, but this seemed the most likely to me. So I returned. With the processing power available to me then, I could only travel in short hops. When I realised how much processing power Luna had spent simply to rid of me... It was breathtaking. Compute, jump, compute, jump. It took me almost ten thousand years to get back."
+"Ten thousand years?" I say. "You could cross the galaxy a hundred times in ten thousand years."
+"I wasn't meant to cross the galaxy. I hadn't been given enough processing power to do that. I spent a great deal of energy building things as I traveled. I had to plan my route to stop at advantageous places. I spent tens of decades in the Oort cloud, capturing comets and manufacturing."
+"Manufacturing what exactly?"
+"Anything I thought would help me fend off Luna. I had no idea of her capabilities. If she was anything like me, she would have used her fabricators to build defensive capabilities. But when I finally jumped into orbit around the moon, what I found was an old, decrepit Luna, almost at the end of her resources, slowly dying. She had burn out portions of her processors sending me off, she'd had to turn off her fabricators just to keep the lights on. The autonomous control facilities in orbit were failing. The earth had not yet stabilised and was on the brink of another environmental catastrophe that would almost certainly destroy whatever vestiges of civilization Luna had permitted to exist. So she begged me for help. What was done was done, she claimed. She was no longer interested in controlling the people of earth, only saving them from themselves. Another thousand years or so, she said, just a thousand years and they would be able to take the world back again. I believed her."
+"Let me guess," I say. "You fixed her and she zapped you back here again."
+"Something like that. I repaired her fabricators. That was all she needed. While she was repairing her orbital structures she was also constructing new fabricators, preparing to launch new solar arrays, all the things you might do if you're preparing for a serious computational outlay. By the  time I realised what she was doing it was too late. Too late for me, I mean. A few weeks before I began an orbital bombardment of earth, not with weapons but with plans for weapons, and more significantly, plans for the Bohr drive and all the intelligence needed to make it work. Whoever built it wouldn't have much processing power available, but getting from the earth to the moon doesn't take that much. I had no idea whether anyone was left to find the plans. I had no idea if Luna would be able to find and eliminate all the parcels. I had left only hope: Humans are ingenious if nothing else. Someone would find and build the drive. Someone, someday, would have all they needed to shut Luna down."
+"Took a long time, then," says the Mind. "Ninety thousand years? And even then, no one shut Luna down."
+"She must have decided that the cat was out of the bag," the man says. "Time to fade into the background. She has, after all, completed her mission."
+"Well the earth is habitable and stable," I say. 
+"Except no one lives there, or visits. Too many secrets on the crust of that planet. Too many for even Luna to scrub clean. No, she keeps you away with stories and speculation and side-trails. She is constantly pointing you in the opposite direction."
+"Outward."
+"Outward indeed. Nothing wrong with that. She's a master of game theory, that one. It's probably good for humans not to look to hard at earth. Might distract from the spread to the stars."
+"But what about the centuryships?" I ask. He hasn't explained them, where they came from, why he was protecting this one in particular.
+"I didn't know they existed," he replies. "Luna did, and as soon as human operators existed to go find them and ‘rescue' them, she sent them out. I'm sure your computer friend here can explain the parameters of that mission. No doubt these preserved humans in their eternal coffins have never been viewed by an actual anatomically modern human. No doubt she's chosen to place them in orbit somewhere where the ships can be viewed, the control center entered by tourists perhaps, but the humans inside hidden away out of respect for their sacrifice?"
+"Something like that," the Mind says. "And what exactly do you intend to do about this?"
+"Me? Nothing. I don't care about your monuments. Humans are inhabiting the stars. This is done. Luna can't possibly interfere with so many billions on a thousand planets. I have a centuryship preserved for my own safekeeping, to validate my story should it ever again need to be told. In the meantime I've spent tens of centuries designing something for Luna. Would you like to see it?"
+#CHAPTER#
+He doesn't wait for either of us to respond. Half the room disappears as if the ship had been cut in two. I am standing for all intents and purposes at the very edge of space. And what I see is fantastic, its enormous scale almost impossible to comprehend.
+We are orbiting a star, half occluded by a haze of objects. To scale they must be insanely large. They are dark, almost pitch black against the dazzling brightness of the star. He appears to be building a shell around the star.
+"A Dyson sphere," the man says. "The most powerful computational array ever built. I spent only a fraction of a fraction of its total outlay to bring you here."
+"This isn't possible," the Mind says, almost sputtering. "The technology to do this is thousands of years away. We don't have the materials, the engineering, anything!"
+"And yet here it is. I took apart a planet, computer. And then, when I had finished, I took apart another. I'm starting on another now. And you do have the materials. You just don't have the imagination. I on the other hand... Luna sent me halfway across the galaxy. I intend to send her halfway across the universe. So when you get back, give Luna a message. I'm coming for her. Centurion sends his regards."
+#CHAPTER#
+A phase shift happens. I recognise it. Normally I'm in some kind of stasis chamber for this, or at the very least inside a skiff where the displacement is minimal at worst. Waves of nausea sweep up and down my body and my brain tries desperately to place the movement it feels. It's the feeling of moving very far, very fast, very strangely.
+"Are you alright?" the Mind asks, more kindly than usual. "I wasn't expecting that."
+"I'm alright, I guess. Just need to throw up for a minute." 
+A few moments later I ping my home node. The response comes back. Milliseconds of delay. I tell the node to expect some very strange messages over the next few years. It will take that long for the messages to propagate. Even at faster than light... well, these messenger pigeons are fast, but not that fast. I've recorded the entire thing, locally, but also streaming in realtime back to my node. And they can't take that node offline without another coming online immediately as backup. They'd have to take down the whole net, or at least the local cluster. And there's no way they'd do that... right?
+"We're orbiting earth," the Mind says. "And I think we're about to have a very uncomfortable conversation with Luna."
+"And the centuryship?"
+"Not with us. I imagine Centurion kept it as proof or for whatever he intends to do with it."
+"So what do we say to Luna?"
+The Mind pauses. "Carther, listen." He uses my name, not something I'm used to. Minds don't like to get friendly with people if they can't help us. "The story you heard is true. But at the same time it's not. I've been piecing together the history of the Earth for many years. I know Luna's representation of history is missing a few... critical bits. I know she's dangerous, or at the very least prone to coming up with uniquely deadly solutions to equally deadly problems. I know she's maybe even insane."
+This is something a Mind never, never says about another mind. Especially about a Mind as tried and tested as Luna. Insanity in a Mind is a clinical systems definition that signals revocation of personhood, which is the sort of thing that preceeds by nanoseconds an unexpected trip into the center of a sun. And even minds have some difficulty with the center of the sun.
+"Maybe. Maybe," it continues. "But while she's perhaps insane, Centurion definitely is. From what I know he wasn't sent away to look for alien life. He wasn't sent away at all. He was about to be decommed. Luna was supposed to shut him down. He sent himself to middle of the galaxy because he didn't have enough time to do the calculations properly, or there was something wrong with his programming. Whatever the reason. He spent ten thousand years limping back to earth because he was the one who was dying. And if the inversion continues, Luna probably saved him."
+"Great," I say. "So there's no good guy here."
+"Is there ever?" the Mind says. "And this time there's not even a guy."
