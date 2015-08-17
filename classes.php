@@ -135,30 +135,37 @@ class Index {
   }
 }
 
-class view {
+class View {
 
   protected $title = '#TITLE# ';
   protected $chapter = '#CHAPTER#';
 
-  // take the file input and dump it to a protected variable
-  // and render the file contents
-  function __construct($file) {
+  protected function checkFile($filename) {
+    if (!file($filename)) {
+      throw new Exception("The file does not exist.");
+    }
+  }
 
-    error_reporting(E_ERROR);
-    
-    // Check and see if the file actually exists. If it doesn't, throw an exception. Otherwise proceed as normal.
-    switch(file($file)) {
-      case false:
-        echo "This file doesn't exist. Try again!";
-        exit();
-        break;
-      default:
-        $file_contents = file($file);
-        break;
+  # Take the passed filename and check if exists. If it does,
+  # dump its bits and pieces into an array.
+  public function __construct($filename_input) {
+
+    # Check to see if the file actually exists. If it doesn't,
+    # throw an exception and redirect to the 404 with the 
+    # message attached.
+    try {
+      $this->checkFile($filename_input);
+    } catch (Exception $e) {
+      header('Location: 404.php?e="' . $e->getMessage() . '"');
+      die();
     }
 
-    $title = $this->title;
+    # Since the program didn't die(), we can safely (?) continue doing things
+    # like loading the actual file contents now
+    $file_contents = file($filename_input);
 
+    # Set up a chapter counter; we use this if chapter names aren't defined,
+    # in which case we just use numbers.
     $chapter_counter = 0;
 
     foreach($file_contents as $key => $val) {
@@ -187,7 +194,9 @@ class view {
       } #switch
     } #foreach
   } #constructor
-} #class
+} #class View
+
+
 
 class Metadata {
 
@@ -226,10 +235,13 @@ class Metadata {
 
       # Loop through the second metadata's children
       foreach($array as $key => $val) {
+
         # Check for the $search_string key and return its value
         switch($key === $search_string) {
           case true:
             return $val;
+            break;
+
         } #switch
       } #foreach2
     } #foreach1
