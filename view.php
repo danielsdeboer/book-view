@@ -1,22 +1,35 @@
-<!DOCTYPE <!DOCTYPE html>
+<?php
+include 'classes.php';
+
+$view = new View($_GET['view']);
+$content = $view->buildArray();
+?>
+
+<!DOCTYPE html>
 <html>
 <head>
   <title>Children of the Moon</title>
-  <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="wrap">
+<div class="wrap">
+<h1><?php echo $content['bookTitle']; ?></h1>
+
 <?php
+  # Outer foreach outputs chapters
+  foreach($content['bookContents'] as $array) {
+    echo '<h2>' . $array['chapterNumber'] . '</h2>' . "\n";
 
-include 'classes.php';
-
-$index = new view($_GET['view']);
+    # Inner foreach outputs paragraphs
+    foreach($array['chapterContents'] as $key => $val) {
+      echo '<p>' . $val['paragraph'] . '</p>' . "\n";
+    }
+  }
 
 ?>
-  </div>
+
+</div>
 
 
 </body>

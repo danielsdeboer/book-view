@@ -90,7 +90,8 @@ class Index {
     foreach ($this->file_list as $key => $val) {
       
       # Open each file and get the first line only in read-only mode
-      $first_line = fgets(fopen($val, 'r'));
+      # Also strip out any newlines
+      $first_line = str_replace(["\r", "\n"], "", fgets(fopen($val, 'r')));
 
       # If a title tag exists, dump the title into an array
       switch(true) {
@@ -124,85 +125,173 @@ class Index {
 
 
   # This builds the index page.
-  public function displayIndex() {
+  public function getTitles() {
 
     # First, build the index
     $this->buildIndex();
 
-    # Open an ordered list
-    echo '<ol>';
-
-    # Iterate over $this->titles
-    foreach ($this->titles as $array) {
-      # open a list item for each item
-      echo '<li>';
-
-      # build the link
-      echo '<a href="view.php?view=' . $array[1] . '">'. $array[0] . '</a>';
-
-      # close the list item
-      echo '</li>';
-
-    } #foreach
-
-    # Close the ordered list
-    echo '</ol>';
+    # Return an array of titles
+    return $this->titles;
   }
 }
 
-class view {
+class View {
 
-  protected $title = '#TITLE# ';
+  protected $filename;
+  protected $title = '#TITLE#';
   protected $chapter = '#CHAPTER#';
 
-  // take the file input and dump it to a protected variable
-  // and render the file contents
-  function __construct($file) {
+  public function checkFile($filename) {
+    if (!file($filename)) {
+      throw new Exception("The file does not exist.");
+    }
+  }
 
-    error_reporting(E_ERROR);
-    
-    // Check and see if the file actually exists. If it doesn't, throw an exception. Otherwise proceed as normal.
-    switch(file($file)) {
-      case false:
-        echo "This file doesn't exist. Try again!";
-        exit();
-        break;
-      default:
-        $file_contents = file($file);
-        break;
+  protected function pr($thing_to_check) {
+    echo '<pre>'; print_r($thing_to_check); echo '</pre>';
+  }
+
+  # Take the passed filename and check if exists. If it does,
+  # dump its bits and pieces into an array.
+  public function __construct($filename_input) {
+
+    # Check to see if the file actually exists. If it doesn't,
+    # throw an exception and redirect to the 404 with the 
+    # message attached.
+    try {
+      $this->checkFile($filename_input);
+    } catch (Exception $e) {
+      header('Location: 404.php?e="' . $e->getMessage() . '"');
+      die();
     }
 
-    $title = $this->title;
+    # if everything goes ok, load the filename_input into a protected variable
+    $this->filename = $filename_input;
 
+  } #constructor
+
+
+  public function getFilename() {
+    return $this->filename;
+  }
+
+
+
+  public function buildJson() {
+    
+    # Get the array
+    $array = $this->buildArray();
+
+    # Return the array as a json encoded object.
+    return json_encode($array);
+
+  } # buildjson()
+
+
+
+  /*
+   *
+   * Here we can build the array without having to worry about output;
+   * if we want json there's another method for that.
+   *
+   */
+
+  public function buildArray() {
+    # Since the program didn't die() in the constructor, we can safely (?) continue 
+    # doing things like loading the actual file contents into an array. Note the 
+    # use of FILE_IGNORE_NEW_LINES, so we don't have to use rtrim() or whatnot
+    # somewhere down the line (or in the view file).
+    $file_contents = file($this->filename, FILE_IGNORE_NEW_LINES);
+
+    # Set up a chapter counter; we use this if chapter names aren't defined,
+    # in which case we just use numbers.
     $chapter_counter = 0;
 
+    # We're going to use a new array for this, as the structure will be 
+    # slightly different to make json encoding easier, like so:
+    #
+    # Title [
+    #   Chapter [
+    #     Paragraph [ ... ]
+    #   ]
+    # ]
+    #
+    # and so forth.
+    $file_contents_formatted = [];
+
+    # Since file() dumped the file as an array, we can iterate over it and
+    # do different things for different bits of the array
     foreach($file_contents as $key => $val) {
+      
+      # Switch over each $val and do different things depending on
+      # what they are (for instance title and chapter headings)
       switch(true) {
+        # Check for a title tag.
         case strpos($val, $this->title) !== false:
-          echo '<h1>' . "\n" . str_replace($this->title, "", $val) . '</h1>' . "\n";
-          break;
-        case strpos($val, $this->chapter) !== false:
-          $chapter_counter++;
-          
-          switch(true) {
-            // if the chapter marker has trailing text (other than a space), print the chapter header
-            case strlen($val) > 11:
-              echo '<h2>' . str_replace($this->chapter, "", $val) . "</h2>\n";
-              break;
-            // otherwise just print a chapter number
-            default:
-              echo '<h2>' . str_replace($this->chapter, "", (string) $chapter_counter) . '</h2>';
-              break;
-            } #switch string length
+          # Remove the title tag and trim any extra spaces
+          $file_contents_formatted = ['bookTitle' => utf8_encode(trim(str_replace($this->title, "", $val))), 'bookContents' => []];
           break;
 
-        default:
-          echo '<p>' . "\n" . htmlentities($val, ENT_QUOTES, 'UTF-8') . '</p>' . "\n";
+        # Check for chapter.
+        case strpos($val, $this->chapter) !== false:
+          
+          # Increment the chapter number each time (before the rest of logic, as we don't
+          # want a Chapter 0).
+          $chapter_counter++;
+
+          # If a chapter title exists, $chapter will be a string which can be echoed 
+          # as a chapter title in the view. If not it will simply be an empty field
+          # in the array in which case the view can just output the chapterNumber.
+          $chapter = utf8_encode(trim(str_replace($this->chapter, "", $val)));
+
+          # Dump the chapter number and title into an array
+          $file_contents_formatted['bookContents'][] = 
+            [
+              'chapterNumber' => $chapter_counter, 
+              'chapterName' => $chapter,
+              'chapterContents' => [],
+            ];
+          // $file_contents_formatted['title'] = array("chapter" => );
+
+          # Set up a paragraph counter. This resets to 0 every time a chapter heading
+          # is found, as we want to count the paragraphs per chapter, not overall.
+          $paragraph_counter = 0;
+
           break;
-      } #switch
+
+        # Otherwise assume we have a paragraph.
+        default:
+
+          # We also want to increment the paragraph counter; not certain how this 
+          # would be useful, but it's there.
+          $paragraph_counter++;
+
+          # Paragraphs don't have any tags, so we just trim() and move on.
+          # We also use htmlspecialchars() so our browsers don't freak out
+          # and interpret things as tags and whatnot.
+          $paragraph = utf8_encode(htmlspecialchars(trim($val)));
+
+          # Dumping the paragraph into the array isn't as easy as it is
+          # for titles and chapters. Here we have to worry about where the
+          # paragraph goes, so we slot it in under $chapter_counter - 1,
+          # which handily happens to be the array position of each chapter
+          $file_contents_formatted['bookContents'][$chapter_counter - 1]['chapterContents'][] = 
+            [
+              'belongsToChapter' => $chapter_counter,
+              'paragraphNumber' => $paragraph_counter, 
+              'paragraph' => $paragraph,
+            ];
+
+      }
     } #foreach
-  } #constructor
-} #class
+
+    # Return the array as... an array
+    return $file_contents_formatted;
+
+  } #buildarray
+
+} #class View
+
 
 class Metadata {
 
@@ -241,10 +330,13 @@ class Metadata {
 
       # Loop through the second metadata's children
       foreach($array as $key => $val) {
+
         # Check for the $search_string key and return its value
         switch($key === $search_string) {
           case true:
             return $val;
+            break;
+
         } #switch
       } #foreach2
     } #foreach1
