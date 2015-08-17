@@ -90,7 +90,8 @@ class Index {
     foreach ($this->file_list as $key => $val) {
       
       # Open each file and get the first line only in read-only mode
-      $first_line = fgets(fopen($val, 'r'));
+      # Also strip out any newlines
+      $first_line = str_replace(["\r", "\n"], "", fgets(fopen($val, 'r')));
 
       # If a title tag exists, dump the title into an array
       switch(true) {
@@ -124,29 +125,13 @@ class Index {
 
 
   # This builds the index page.
-  public function displayIndex() {
+  public function getTitles() {
 
     # First, build the index
     $this->buildIndex();
 
-    # Open an ordered list
-    echo '<ol>';
-
-    # Iterate over $this->titles
-    foreach ($this->titles as $array) {
-      # open a list item for each item
-      echo '<li>';
-
-      # build the link
-      echo '<a href="view.php?view=' . $array[1] . '">'. $array[0] . '</a>';
-
-      # close the list item
-      echo '</li>';
-
-    } #foreach
-
-    # Close the ordered list
-    echo '</ol>';
+    # Return an array of titles
+    return $this->titles;
   }
 }
 
