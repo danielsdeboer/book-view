@@ -137,13 +137,17 @@ class Index {
 
 class View {
 
-  protected $title = '#TITLE# ';
+  protected $title = '#TITLE#';
   protected $chapter = '#CHAPTER#';
 
   protected function checkFile($filename) {
     if (!file($filename)) {
       throw new Exception("The file does not exist.");
     }
+  }
+
+  protected function pr($thing_to_check) {
+    echo '<pre>'; print_r($thing_to_check); echo '</pre>';
   }
 
   # Take the passed filename and check if exists. If it does,
@@ -161,41 +165,87 @@ class View {
     }
 
     # Since the program didn't die(), we can safely (?) continue doing things
-    # like loading the actual file contents now
-    $file_contents = file($filename_input);
+    # like loading the actual file contents into an array. Note the use of
+    # FILE_IGNORE_NEW_LINES, so we don't have to use rtrim() or whatnot
+    # somewhere down the line (or in the view file).
+    $file_contents = file($filename_input, FILE_IGNORE_NEW_LINES);
 
     # Set up a chapter counter; we use this if chapter names aren't defined,
     # in which case we just use numbers.
     $chapter_counter = 0;
 
+    # We're going to use a new array for this, as the structure will be 
+    # slightly different to make json encoding easier, like so:
+    #
+    # Title [
+    #   Chapter [
+    #     Paragraph [ ... ]
+    #   ]
+    # ]
+    #
+    # and so forth.
+    $file_contents_formatted = [];
+
+    # Since file() dumped the file as an array, we can iterate over it and
+    # do different things for different bits of the array
     foreach($file_contents as $key => $val) {
+      
+      # Switch over each $val and do different things depending on
+      # what they are (for instance title and chapter headings)
       switch(true) {
+        # Check for a title tag.
         case strpos($val, $this->title) !== false:
-          echo '<h1>' . "\n" . str_replace($this->title, "", $val) . '</h1>' . "\n";
-          break;
-        case strpos($val, $this->chapter) !== false:
-          $chapter_counter++;
-          
-          switch(true) {
-            // if the chapter marker has trailing text (other than a space), print the chapter header
-            case strlen($val) > 11:
-              echo '<h2>' . str_replace($this->chapter, "", $val) . "</h2>\n";
-              break;
-            // otherwise just print a chapter number
-            default:
-              echo '<h2>' . str_replace($this->chapter, "", (string) $chapter_counter) . '</h2>';
-              break;
-            } #switch string length
+          # Remove the title tag and trim any extra spaces
+          $file_contents_formatted = [trim(str_replace($this->title, "", $val))];
           break;
 
-        default:
-          echo '<p>' . "\n" . htmlentities($val, ENT_QUOTES, 'UTF-8') . '</p>' . "\n";
+        # Check for chapter.
+        case strpos($val, $this->chapter) !== false:
+          
+          # Increment the chapter number each time (before the rest of logic, as we don't
+          # want a Chapter 0).
+          $chapter_counter++;
+
+          # If a chapter title exists, $chapter will be a string which can be echoed 
+          # as a chapter title in the view. If not it will simply be an empty field
+          # in the array in which case the view can just output the chapterNumber.
+          $chapter = trim(str_replace($this->chapter, "", $val));
+
+          # Dump the chapter number and title into an array
+          $file_contents_formatted[] = [$chapter_counter, $chapter];
+          // $file_contents_formatted['title'] = array("chapter" => );
+
+          # Set up a paragraph counter. This resets to 0 every time a chapter heading
+          # is found, as we want to count the paragraphs per chapter, not overall.
+          $paragraph_counter = 0;
+
           break;
-      } #switch
+
+        # Otherwise assume we have a paragraph.
+        default:
+
+          # We also want to increment the paragraph counter; not certain how this 
+          # would be useful, but it's there.
+          $paragraph_counter++;
+
+          # Paragraphs don't have any tags, so we just trim() and move on.
+          $paragraph = trim($val);
+
+          # Dumping the paragraph into the array isn't as easy as it is
+          # for titles and chapters. Here we have to worry about where the
+          # paragraph goes, so we slot it in under $chapter_counter - 1,
+          # which handily happens to be the array position of each chapter
+          $file_contents_formatted[$chapter_counter][] = [$paragraph_counter, $paragraph];
+
+      }
     } #foreach
+
+    $this->pr($file_contents_formatted);
+
+    # Return the array as a json encoded object.
+    $this->pr(json_encode($file_contents_formatted), 3);
   } #constructor
 } #class View
-
 
 
 class Metadata {

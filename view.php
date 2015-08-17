@@ -1,7 +1,5 @@
 <?php
 include 'classes.php';
-$view = new View($_GET['view']);
-
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +13,8 @@ $view = new View($_GET['view']);
 <div class="wrap">
 <?php
 
-
+$view = new View($_GET['view']);
+// var_dump(json_decode($view));
 
 ?>
 </div>
