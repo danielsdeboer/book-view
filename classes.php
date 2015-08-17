@@ -140,7 +140,7 @@ class View {
   protected $title = '#TITLE#';
   protected $chapter = '#CHAPTER#';
 
-  protected function checkFile($filename) {
+  public function checkFile($filename) {
     if (!file($filename)) {
       throw new Exception("The file does not exist.");
     }
@@ -196,7 +196,7 @@ class View {
         # Check for a title tag.
         case strpos($val, $this->title) !== false:
           # Remove the title tag and trim any extra spaces
-          $file_contents_formatted = [trim(str_replace($this->title, "", $val))];
+          $file_contents_formatted = ['bookTitle' => utf8_encode(trim(str_replace($this->title, "", $val))), 'bookContents' => []];
           break;
 
         # Check for chapter.
@@ -209,10 +209,15 @@ class View {
           # If a chapter title exists, $chapter will be a string which can be echoed 
           # as a chapter title in the view. If not it will simply be an empty field
           # in the array in which case the view can just output the chapterNumber.
-          $chapter = trim(str_replace($this->chapter, "", $val));
+          $chapter = utf8_encode(trim(str_replace($this->chapter, "", $val)));
 
           # Dump the chapter number and title into an array
-          $file_contents_formatted[] = [$chapter_counter, $chapter];
+          $file_contents_formatted['bookContents'][] = 
+            [
+              'chapterNumber' => $chapter_counter, 
+              'chapterName' => $chapter,
+              'chapterContents' => [],
+            ];
           // $file_contents_formatted['title'] = array("chapter" => );
 
           # Set up a paragraph counter. This resets to 0 every time a chapter heading
@@ -229,21 +234,25 @@ class View {
           $paragraph_counter++;
 
           # Paragraphs don't have any tags, so we just trim() and move on.
-          $paragraph = trim($val);
+          $paragraph = utf8_encode(trim($val));
 
           # Dumping the paragraph into the array isn't as easy as it is
           # for titles and chapters. Here we have to worry about where the
           # paragraph goes, so we slot it in under $chapter_counter - 1,
           # which handily happens to be the array position of each chapter
-          $file_contents_formatted[$chapter_counter][] = [$paragraph_counter, $paragraph];
+          $file_contents_formatted['bookContents'][$chapter_counter - 1]['chapterContents'][] = 
+            [
+              'belongsToChapter' => $chapter_counter,
+              'paragraphNumber' => $paragraph_counter, 
+              'paragraph' => $paragraph,
+            ];
 
       }
     } #foreach
 
-    $this->pr($file_contents_formatted);
-
     # Return the array as a json encoded object.
-    $this->pr(json_encode($file_contents_formatted), 3);
+    return json_encode($file_contents_formatted,JSON_PRETTY_PRINT);
+
   } #constructor
 } #class View
 
