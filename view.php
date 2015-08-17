@@ -1,5 +1,6 @@
 <?php
 include 'classes.php';
+include 'functions.php';
 
 $view = new View($_GET['view']);
 $content = $view->buildArray();
@@ -27,7 +28,11 @@ $content = $view->buildArray();
     }
   }
 
+pr($content);
+
 ?>
+
+
 
 </div>
 

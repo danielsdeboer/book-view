@@ -206,6 +206,7 @@ class View {
     # Set up a chapter counter; we use this if chapter names aren't defined,
     # in which case we just use numbers.
     $chapter_counter = 0;
+    $paragraph_counter = 0;
 
     # We're going to use a new array for this, as the structure will be 
     # slightly different to make json encoding easier, like so:
@@ -253,8 +254,8 @@ class View {
             ];
           // $file_contents_formatted['title'] = array("chapter" => );
 
-          # Set up a paragraph counter. This resets to 0 every time a chapter heading
-          # is found, as we want to count the paragraphs per chapter, not overall.
+          # Reset the paragraph counter 0 every time a chapter heading is found.
+          # We want to count the paragraphs per chapter, not overall.
           $paragraph_counter = 0;
 
           break;
@@ -264,7 +265,7 @@ class View {
 
           # We also want to increment the paragraph counter; not certain how this 
           # would be useful, but it's there.
-          $paragraph_counter++;
+            $paragraph_counter++;
 
           # Paragraphs don't have any tags, so we just trim() and move on.
           # We also use htmlspecialchars() so our browsers don't freak out
