@@ -1,38 +1,22 @@
 <?php
 include 'classes.php';
-function fileName() {
-  return 'cotm';
-}
+$file_name = 'cotm';
 
-$index = new Index(fileName());
-
-function say($something) {
-
-  // "cache" the object - probably a better way of doing this?
-  static $metadata;
-
-  switch (is_null($metadata)) {
-    case true:
-      $metadata = new Metadata(fileName());  
-      break;
-  }
-
-  echo $metadata->getMetadata($something);
-}
-
+$index = new Index($file_name);
+$metadata = new Metadata($file_name);  
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-  <title><?php say('documentTitle')?></title>
+  <title><?php echo $metadata->getMetadata('documentTitle'); ?></title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="wrap">
 <header>
-  <h1 class="text-uppercase text-center"><?php say('documentTitle'); ?></h1>
-  <h3 class="text-center">by <?php say('authorFirstName'); ?> <?php say('authorLastName'); ?></h3>
+  <h1><?php echo $metadata->getMetadata('documentTitle'); ?></h1>
+  <h3>by <?php echo $metadata->getMetadata('authorFirstName'); ?> <?php echo $metadata->getMetadata('authorLastName'); ?></h3>
 </header>
 
 
@@ -45,7 +29,7 @@ function say($something) {
 </div>
 
 <footer>
-  <p>A <?php say('documentCategory'); ?> <?php say('documentType'); ?>.</p>
+  <p>A <?php echo $metadata->getMetadata('documentCategory'); ?> <?php echo $metadata->getMetadata('documentType'); ?>.</p>
 </footer>
 
 

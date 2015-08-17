@@ -238,10 +238,9 @@ class Metadata {
     
     # Loop through the first array level [metadata]
     foreach($this->metadata['metadata'] as $array) {
-      
+
       # Loop through the second metadata's children
       foreach($array as $key => $val) {
-
         # Check for the $search_string key and return its value
         switch($key === $search_string) {
           case true:
