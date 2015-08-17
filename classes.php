@@ -203,10 +203,14 @@ class View {
     # somewhere down the line (or in the view file).
     $file_contents = file($this->filename, FILE_IGNORE_NEW_LINES);
 
+
+
     # Set up a chapter counter; we use this if chapter names aren't defined,
     # in which case we just use numbers.
     $chapter_counter = 0;
     $paragraph_counter = 0;
+
+
 
     # We're going to use a new array for this, as the structure will be 
     # slightly different to make json encoding easier, like so:
@@ -220,6 +224,8 @@ class View {
     # and so forth.
     $file_contents_formatted = [];
 
+
+
     # Since file() dumped the file as an array, we can iterate over it and
     # do different things for different bits of the array
     foreach($file_contents as $key => $val) {
@@ -227,6 +233,7 @@ class View {
       # Switch over each $val and do different things depending on
       # what they are (for instance title and chapter headings)
       switch(true) {
+
         # Check for a title tag.
         case strpos($val, $this->title) !== false:
           # Remove the title tag and trim any extra spaces
@@ -276,7 +283,10 @@ class View {
           # for titles and chapters. Here we have to worry about where the
           # paragraph goes, so we slot it in under $chapter_counter - 1,
           # which handily happens to be the array position of each chapter
-          $file_contents_formatted['bookContents'][$chapter_counter - 1]['chapterContents'][] = 
+          # 
+          # The ternary expression following $chapter_counter is useful when
+          # there are no chapters; otherwise the array's index is -1.
+          $file_contents_formatted['bookContents'][$chapter_counter > 0 ? $chapter_counter - 1 : 0]['chapterContents'][] = 
             [
               'belongsToChapter' => $chapter_counter,
               'paragraphNumber' => $paragraph_counter, 

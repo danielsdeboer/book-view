@@ -20,16 +20,15 @@ $content = $view->buildArray();
 <?php
   # Outer foreach outputs chapters
   foreach($content['bookContents'] as $array) {
-    echo '<h2>' . $array['chapterNumber'] . '</h2>' . "\n";
-
+    if (isset($array['chapterNumber'])) {
+      echo '<h2>' . $array['chapterNumber'] . '</h2>' . "\n";  
+    }
+    
     # Inner foreach outputs paragraphs
     foreach($array['chapterContents'] as $key => $val) {
       echo '<p>' . $val['paragraph'] . '</p>' . "\n";
     }
   }
-
-pr($content);
-
 ?>
 
 
