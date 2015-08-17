@@ -137,6 +137,7 @@ class Index {
 
 class View {
 
+  protected $filename;
   protected $title = '#TITLE#';
   protected $chapter = '#CHAPTER#';
 
@@ -164,11 +165,43 @@ class View {
       die();
     }
 
-    # Since the program didn't die(), we can safely (?) continue doing things
-    # like loading the actual file contents into an array. Note the use of
-    # FILE_IGNORE_NEW_LINES, so we don't have to use rtrim() or whatnot
+    # if everything goes ok, load the filename_input into a protected variable
+    $this->filename = $filename_input;
+
+  } #constructor
+
+
+  public function getFilename() {
+    return $this->filename;
+  }
+
+
+
+  public function buildJson() {
+    
+    # Get the array
+    $array = $this->buildArray();
+
+    # Return the array as a json encoded object.
+    return json_encode($array);
+
+  } # buildjson()
+
+
+
+  /*
+   *
+   * Here we can build the array without having to worry about output;
+   * if we want json there's another method for that.
+   *
+   */
+
+  public function buildArray() {
+    # Since the program didn't die() in the constructor, we can safely (?) continue 
+    # doing things like loading the actual file contents into an array. Note the 
+    # use of FILE_IGNORE_NEW_LINES, so we don't have to use rtrim() or whatnot
     # somewhere down the line (or in the view file).
-    $file_contents = file($filename_input, FILE_IGNORE_NEW_LINES);
+    $file_contents = file($this->filename, FILE_IGNORE_NEW_LINES);
 
     # Set up a chapter counter; we use this if chapter names aren't defined,
     # in which case we just use numbers.
@@ -234,7 +267,9 @@ class View {
           $paragraph_counter++;
 
           # Paragraphs don't have any tags, so we just trim() and move on.
-          $paragraph = utf8_encode(trim($val));
+          # We also use htmlspecialchars() so our browsers don't freak out
+          # and interpret things as tags and whatnot.
+          $paragraph = utf8_encode(htmlspecialchars(trim($val)));
 
           # Dumping the paragraph into the array isn't as easy as it is
           # for titles and chapters. Here we have to worry about where the
@@ -250,10 +285,11 @@ class View {
       }
     } #foreach
 
-    # Return the array as a json encoded object.
-    return json_encode($file_contents_formatted,JSON_PRETTY_PRINT);
+    # Return the array as... an array
+    return $file_contents_formatted;
 
-  } #constructor
+  } #buildarray
+
 } #class View
 
 
