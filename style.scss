@@ -1,7 +1,18 @@
+@import url(//fonts.googleapis.com/css?family=PT+Serif:400,700);
+@import url(//fonts.googleapis.com/css?family=Lato:400,300,700);
 $border: #9e9e9e;
+$footer-height: 4rem;
+
+
 
 * {
   box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -11,7 +22,15 @@ body {
 
 .wrap {
   margin: 0 auto;
+  margin-bottom: -$footer-height;
+  min-height: 100%;
   width: 50%;
+
+  &:after {
+    content: "";
+    display: block;
+    height: $footer-height;
+  }
 
   p {
     font-size: 1.2em;
@@ -25,6 +44,7 @@ body {
     font-size: 3em;
     font-weight: 300;
     text-align: center;
+    margin: .4em 0;
   }
 
   h2 {
@@ -35,5 +55,36 @@ body {
     font-weight: 400;
     padding: .25em 0;
     text-align: center;
+    margin: .5em 0;
+  }
+
+  h3 {
+    border-bottom: 1px solid $border;
+    border-top: 1px solid $border;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin: .5em 0;
+    padding: .25em 0;
+    text-align: center;
+  }
+}
+
+article {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+footer {
+  border-top: 1px solid $border;
+  height: $footer-height;
+  margin: 0 auto;
+  width: 50%;
+
+  p {
+    text-align: center;
+    margin: 1rem;
   }
 }

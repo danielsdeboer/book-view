@@ -1,6 +1,6 @@
 <?php
 
-class index {
+class Index {
 
   protected $file_list = [];
   protected $title_tag = '#TITLE# ';
@@ -203,6 +203,55 @@ class view {
     } #foreach
   } #constructor
 } #class
+
+class Metadata {
+
+  protected $metadata = [];
+
+  function __construct ($filename) {
+    # Grab the contents of the json file as a php array.
+    # The second parameter "true" on json_decode does this.
+    $metadata_from_json = json_decode(file_get_contents($filename . '.json'), true);
+
+    # dump the remaining files into the protected variable $file_list
+    $this->setMetadata($metadata_from_json);
+
+  } #constructor
+
+  # Setter for $this->metadata
+  # Again, this is protected as it doesn't need to be accessed
+  # from outside of this class, unlike the getter below.
+  protected function setMetadata($metadata) {
+    
+    # check if metadata is an array, we don't really want to pass an object
+    switch(is_array($metadata)) {
+      case true:
+        $this->metadata = $metadata;
+        break;
+
+    } #switch
+  } #setMetadata
+
+
+  # getter for metadata bits and bobs
+  public function getMetadata($search_string) {
+    
+    # Loop through the first array level [metadata]
+    foreach($this->metadata['metadata'] as $array) {
+      
+      # Loop through the second metadata's children
+      foreach($array as $key => $val) {
+
+        # Check for the $search_string key and return its value
+        switch($key === $search_string) {
+          case true:
+            return $val;
+        } #switch
+      } #foreach2
+    } #foreach1
+  } #getMetadata
+
+} #class Metadata
 
 
 ?>
