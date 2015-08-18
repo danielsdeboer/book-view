@@ -39,34 +39,47 @@ body {
     text-indent: 1em;
   }
 
-  h1 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: 'Lato', sans-serif;
+    text-align: center;
+  }
+
+  h2,
+  h3,
+  h4 {
+    border-bottom: 1px solid $border;
+    border-top: 1px solid $border;
+  }
+
+  h1 {
     font-size: 3em;
     font-weight: 300;
-    text-align: center;
     margin: .4em 0;
   }
 
   h2 {
-    border-bottom: 1px solid $border;
-    border-top: 1px solid $border;
-    font-family: 'Lato', sans-serif;
     font-size: 1.8em;
     font-weight: 400;
     padding: .25em 0;
-    text-align: center;
     margin: .5em 0;
   }
 
   h3 {
-    border-bottom: 1px solid $border;
-    border-top: 1px solid $border;
-    font-family: 'Lato', sans-serif;
     font-size: 1.3em;
     font-weight: 400;
     margin: .5em 0;
     padding: .25em 0;
     text-align: center;
+  }
+
+  h4 {
+    font-size: .9em;
+    font-weight: 400;
+    margin: 3em 0 1em;
+    padding: 1em 0;
   }
 }
 
@@ -84,7 +97,14 @@ footer {
   width: 50%;
 
   p {
-    text-align: center;
     margin: 1rem;
+    text-align: center;
   }
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

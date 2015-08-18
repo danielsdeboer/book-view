@@ -23,7 +23,7 @@ $metadata = new Metadata($file_name);
 
   <article>
     <ol>
-      <?php 
+      <?php
         # Build the list of titles
         foreach($index->getTitles() as $array) {
           echo '<li><a href="view.php?view=' . $array[1] . '">' . $array[0] . '</a></li>';

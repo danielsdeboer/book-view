@@ -89,11 +89,11 @@ class Index {
     # iterate over the list of files
     foreach ($this->file_list as $key => $val) {
       
-      # Open each file and get the first line only in read-only mode
-      # Also strip out any newlines
+      # Open each file and get the first line only in read-only mode.
+      # Also strip out any newlines which are annoying if present.
       $first_line = str_replace(["\r", "\n"], "", fgets(fopen($val, 'r')));
 
-      # If a title tag exists, dump the title into an array
+      # If a title tag exists, dump the title into an array.
       switch(true) {
         # !== false is important here as 0 (the position that $this->title_tag 
         # should appear) evaluates as false when an equality operator (==) is 
@@ -134,6 +134,72 @@ class Index {
     return $this->titles;
   }
 }
+
+
+
+class Nav extends Index {
+
+  protected $current_document;
+  protected $sanitized_file_list;
+
+  public function __construct($filename) {
+
+    # Bump the input into the current_document var. This will be
+    # used to determine if there is a next document or not.
+    $this->current_document = $filename;
+
+    # Get rid of any numbers in the filename
+    $filename = preg_replace('/\d/', "", $filename);
+
+    # Split the string using . as the delimiter
+    $filename = explode(".", $filename);
+
+    # Get the first value in the returned array
+    $filename = $filename[0];
+
+    # Call the parent constructor with the filtered filename
+    parent::__construct($filename);
+
+    $this->setSanitizedFileList();
+  }
+
+
+
+  protected function setSanitizedFileList() {
+    $file_list = $this->file_list;
+
+    # If the array value contains a json file, unset that key.
+    # We don't want users to navigate to the metadata file.
+    foreach($file_list as $key => $val) {
+      if (strpos($val, '.json') !== false) {
+        unset($file_list[$key]);
+      }
+    }
+
+    $this->sanitized_file_list = $file_list;
+  }
+
+
+
+  public function getDocument($number) {
+    $current_document = $this->current_document;
+    $file_list = $this->sanitized_file_list;
+
+    $key = array_search($current_document, $file_list);
+
+    $key = $key + (int) $number;
+
+    if (isset($file_list[$key])) {
+      return $file_list[$key];
+    }
+
+  }
+
+
+
+}
+
+
 
 class View {
 
@@ -291,6 +357,7 @@ class View {
               'belongsToChapter' => $chapter_counter,
               'paragraphNumber' => $paragraph_counter, 
               'paragraph' => $paragraph,
+              'wordCount' => str_word_count($paragraph),
             ];
 
       }
