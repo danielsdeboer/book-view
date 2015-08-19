@@ -43,7 +43,7 @@ body {
     margin: .4em 0; }
   .wrap h2 {
     font-size: 1.8em;
-    font-weight: 400;
+    font-weight: 300;
     padding: .25em 0;
     margin: .5em 0; }
   .wrap h3 {
@@ -78,5 +78,15 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
+
+a:link,
+a:visited,
+a:active {
+  color: #bdbdbd;
+  font-family: "Lato", sans-serif;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
 
 /*# sourceMappingURL=style.css.map */

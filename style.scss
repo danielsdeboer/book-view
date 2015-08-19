@@ -4,6 +4,9 @@ $border: #9e9e9e;
 $footer-height: 4rem;
 $font-non-body: 'Lato', sans-serif;
 
+// Color staclk
+$grey-mid: #bdbdbd;
+
 
 
 * {
@@ -63,7 +66,7 @@ body {
 
   h2 {
     font-size: 1.8em;
-    font-weight: 400;
+    font-weight: 300;
     padding: .25em 0;
     margin: .5em 0;
   }
@@ -113,5 +116,11 @@ nav {
 a:link,
 a:visited,
 a:active {
+  color: $grey-mid;
+  font-family: $font-non-body;
+  text-decoration: none;
+}
 
+a:hover {
+  text-decoration: underline;
 }
