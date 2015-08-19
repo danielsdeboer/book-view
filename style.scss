@@ -2,6 +2,7 @@
 @import url(//fonts.googleapis.com/css?family=Lato:400,300,700);
 $border: #9e9e9e;
 $footer-height: 4rem;
+$font-non-body: 'Lato', sans-serif;
 
 
 
@@ -107,4 +108,10 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+a:link,
+a:visited,
+a:active {
+
 }

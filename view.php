@@ -20,11 +20,12 @@ $content = $view->buildArray();
 <h1><?php echo $content['bookTitle']; ?></h1>
 
 <nav>
-  <?php if ($nav->getDocument('-1')) { echo '<a href="view.php?view=' . $nav->getDocument('-1') . '">Previous Document</a>'; } ?>
+  <?php if ($nav->getDocumentOrTitle('-1','doc')) { echo '<a href="view.php?view=' . $nav->getDocumentOrTitle('-1', 'doc') . '">' . $nav->getDocumentOrTitle('-1', 'title') . '</a>'; } ?>
   
   <a href="index.php">Back to Index</a>
 
-  <?php if ($nav->getDocument('+1')) { echo '<a href="view.php?view=' . $nav->getDocument('+1') . '">Next Document</a>'; } ?>
+  <?php if ($nav->getDocumentOrTitle('+1','doc')) { echo '<a href="view.php?view=' . $nav->getDocumentOrTitle('+1', 'doc') . '">' . $nav->getDocumentOrTitle('+1', 'title') . '</a>'; } ?>
+
   
 
 </nav>

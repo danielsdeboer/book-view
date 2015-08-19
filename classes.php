@@ -139,8 +139,14 @@ class Index {
 
 class Nav extends Index {
 
+  # Holds the current document (filename with extension)
   protected $current_document;
+  # Holds a list of titles generated from the parent class
+  protected $title_list;
+  # Holds a sanitized file list stripped of any metadata documents
   protected $sanitized_file_list;
+
+  
 
   public function __construct($filename) {
 
@@ -161,6 +167,7 @@ class Nav extends Index {
     parent::__construct($filename);
 
     $this->setSanitizedFileList();
+    $this->title_list = $this->getTitles();
   }
 
 
@@ -181,23 +188,69 @@ class Nav extends Index {
 
 
 
-  public function getDocument($number) {
+  public function getDocumentOrTitle($number, $type) {
     $current_document = $this->current_document;
     $file_list = $this->sanitized_file_list;
+    $title_list = $this->title_list;
 
-    $key = array_search($current_document, $file_list);
+    # Switch over the $type variable
+    switch(true) {
+     
+      # If the type variable is 'document' or 'doc', get the
+      # document index specified by $number. This can be a positive
+      # or negative number, or even zero. So it's possible to even skip
+      # forward or backward by several documents by specifying '-2'
+      # for instance.
+      case $type === 'document' || $type === 'doc':
 
-    $key = $key + (int) $number;
+        # Search the $file_list array for the current document.
+        # This returns false if not found, which shouldn't happen,
+        # but even if it does, false + 0 = 0 (etc) in PHP.
+        $key = array_search($current_document, $file_list);
 
-    if (isset($file_list[$key])) {
-      return $file_list[$key];
-    }
+        # Increment the key by whatever number was passed to the
+        # method. This number does not have to be positive or even
+        # non-zero.
+        $key = $key + (int) $number;
+  
+        # If the index at that key is set, return the value
+        if (isset($file_list[$key])) {
+          return $file_list[$key];
+        }
+        break;
 
-  }
+      # If the type variable is 'title', get the title. Same
+      # caveat as 'document' above.
+      case $type === 'title':
+        
+        # Because the $title_list array structure is a little different
+        # we do a foreach to search the multidimentional array and
+        # discover why variables should not be named 'key'.
+        foreach($title_list as $arraykey => $val) {
 
+          # If we find anything, set the key
+          if (array_search($current_document, $val)) {
+            $key = $arraykey;
+          }
+        }
 
+        # Increment the key as we did above
+        $key = $key + (int) $number;
 
-}
+        # If the index can exist (eg it's greater than zero), return
+        # the value of that index.
+        # Note that in this array we search for $current_document which
+        # lives at $title_list[$key][1], but we actually return 
+        # $title_list[0] (which contains the title, not the filename).
+        if ($key >= 0) {
+          return $title_list[$key][0];
+        }
+
+        break;
+
+    } #switch type
+  } #getDocumentOrTitle
+} #class Nav
 
 
 
